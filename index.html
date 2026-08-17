@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Junior Engineering Challenge</title>
+  <title>Abacistics | Engineering Competitions</title>
   
-  <!-- Google Fonts: Fredoka & Comic Neue for friendly, rounded Montessori-style lettering -->
+  <!-- Google Font: Outfit (Clean, modern geometric sans-serif) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,206 +19,297 @@
           colors: {
             mBlue: '#0077D9',
             mRed: '#D92B2B',
-            mYellow: '#FFC83B',
-            mWood: '#F3E8D3',
+            mWood: '#F4EAD5',
           },
           fontFamily: {
-            fredoka: ['Fredoka', 'sans-serif'],
-            comic: ['Comic Neue', 'cursive'],
+            outfit: ['Outfit', 'sans-serif'],
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-white text-slate-900 font-fredoka min-h-screen flex flex-col">
+<body class="bg-white text-slate-900 font-outfit min-h-screen flex flex-col antialiased">
 
-  <!-- Header / Banner -->
-  <header class="bg-mWood border-b-8 border-mBlue py-8 px-4 text-center shadow-sm">
+  <!-- Header Banner -->
+  <header class="bg-mWood border-b-8 border-mBlue py-10 px-4 text-center shadow-sm">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl sm:text-6xl font-bold tracking-wider mb-2">
-        <span class="text-mRed">J</span><span class="text-mBlue">u</span><span class="text-mRed">n</span><span class="text-mBlue">i</span><span class="text-mRed">o</span><span class="text-mBlue">r</span> 
-        <span class="text-mRed">E</span><span class="text-mBlue">n</span><span class="text-mRed">g</span><span class="text-mBlue">i</span><span class="text-mRed">n</span><span class="text-mBlue">e</span><span class="text-mRed">e</span><span class="text-mBlue">r</span><span class="text-mRed">s</span>
+      <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-2">
+        <span class="text-mBlue">A</span><span class="text-mRed">b</span><span class="text-mBlue">a</span><span class="text-mRed">c</span><span class="text-mBlue">i</span><span class="text-mRed">s</span><span class="text-mRed">t</span><span class="text-mBlue">i</span><span class="text-mRed">c</span><span class="text-mRed">s</span>
       </h1>
-      <p class="text-lg sm:text-2xl text-mBlue font-semibold">Build • Explore • Solve • Learn</p>
+      <p class="text-xl sm:text-2xl text-mBlue font-semibold uppercase tracking-wider">For students, by students</p>
     </div>
   </header>
 
   <!-- Navigation Tabs -->
-  <nav class="max-w-4xl mx-auto w-full px-4 mt-6">
+  <nav class="max-w-5xl mx-auto w-full px-4 mt-8">
     <div class="flex flex-wrap justify-center gap-3">
       <button onclick="switchTab('leaderboard')" id="tab-leaderboard" 
-        class="tab-btn bg-mBlue text-white text-xl font-bold px-6 py-3 rounded-2xl border-b-4 border-blue-900 transition-all shadow-md">
-        🏆 Leaderboard
+        class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 transition-all shadow-sm">
+        Leaderboard
       </button>
       <button onclick="switchTab('competition')" id="tab-competition" 
-        class="tab-btn bg-mWood text-slate-700 text-xl font-bold px-6 py-3 rounded-2xl border-b-4 border-amber-300 hover:bg-amber-100 transition-all">
-        🧩 Competition Details
+        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
+        Competition Details
       </button>
       <button onclick="switchTab('gallery')" id="tab-gallery" 
-        class="tab-btn bg-mWood text-slate-700 text-xl font-bold px-6 py-3 rounded-2xl border-b-4 border-amber-300 hover:bg-amber-100 transition-all">
-        🎨 Design Highlights
+        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
+        Design Highlights
       </button>
       <button onclick="switchTab('about')" id="tab-about" 
-        class="tab-btn bg-mWood text-slate-700 text-xl font-bold px-6 py-3 rounded-2xl border-b-4 border-amber-300 hover:bg-amber-100 transition-all">
-        ⭐ About Us
+        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
+        About Us
       </button>
     </div>
   </nav>
 
-  <!-- Main Content Container -->
-  <main class="max-w-4xl mx-auto w-full px-4 my-8 flex-grow">
+  <!-- Main Content Area -->
+  <main class="max-w-5xl mx-auto w-full px-4 my-8 flex-grow">
 
-    <!-- Tab 1: Leaderboard -->
-    <section id="content-leaderboard" class="tab-content block space-y-6">
-      <div class="bg-slate-50 border-4 border-mBlue rounded-3xl p-6 shadow-md">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-3xl font-bold text-mBlue">Current Standings</h2>
-          <span class="bg-mRed text-white text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wide">Lowest Time Wins!</span>
+    <!-- TAB 1: LEADERBOARD -->
+    <section id="content-leaderboard" class="tab-content block space-y-8">
+      
+      <!-- Division Switcher -->
+      <div class="flex justify-center gap-4">
+        <button onclick="switchDivision('lower')" id="div-btn-lower" class="px-5 py-2 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900">
+          Lower Elementary Division
+        </button>
+        <button onclick="switchDivision('upper')" id="div-btn-upper" class="px-5 py-2 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200">
+          Upper Elementary Division
+        </button>
+      </div>
+
+      <!-- Lower Elementary Table -->
+      <div id="division-lower" class="bg-slate-50 border-4 border-mBlue rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-2">
+          <h2 class="text-2xl font-bold text-mBlue">Lower Elementary Leaderboard</h2>
+          <span class="bg-mRed text-white text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider">Goal: Longest Airtime</span>
         </div>
-
         <div class="overflow-x-auto">
-          <table class="w-full text-left border-separate border-spacing-y-3">
+          <table class="w-full text-left border-separate border-spacing-y-2">
             <thead>
-              <tr class="text-mBlue text-lg font-bold">
+              <tr class="text-mBlue text-base font-bold">
                 <th class="p-3">Rank</th>
                 <th class="p-3">Submission Name</th>
                 <th class="p-3">First Name</th>
                 <th class="p-3">State</th>
-                <th class="p-3 text-right">Time</th>
+                <th class="p-3 text-right">Airtime</th>
               </tr>
             </thead>
-            <tbody class="text-lg">
-              <tr class="bg-white border-2 border-slate-200 shadow-sm rounded-2xl">
-                <td class="p-4 font-bold text-mRed text-xl">🥇 #1</td>
-                <td class="p-4 font-bold">Maze Runner 3000</td>
+            <tbody class="text-base">
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+                <td class="p-4 font-bold text-mRed">#1</td>
+                <td class="p-4 font-semibold">Sky Hopper 1000</td>
                 <td class="p-4">Leo</td>
                 <td class="p-4">OH</td>
-                <td class="p-4 text-right font-bold text-mBlue">12.4s</td>
+                <td class="p-4 text-right font-bold text-mBlue">6.42s</td>
               </tr>
-              <tr class="bg-white border-2 border-slate-200 shadow-sm rounded-2xl">
-                <td class="p-4 font-bold text-mBlue text-xl">🥈 #2</td>
-                <td class="p-4 font-bold">Speedy Bot</td>
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+                <td class="p-4 font-bold text-mBlue">#2</td>
+                <td class="p-4 font-semibold">Lego Launcher</td>
                 <td class="p-4">Maya</td>
                 <td class="p-4">CA</td>
-                <td class="p-4 text-right font-bold text-mBlue">14.1s</td>
+                <td class="p-4 text-right font-bold text-mBlue">5.81s</td>
               </tr>
-              <tr class="bg-white border-2 border-slate-200 shadow-sm rounded-2xl">
-                <td class="p-4 font-bold text-mRed text-xl">🥉 #3</td>
-                <td class="p-4 font-bold">Marble Navigator</td>
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+                <td class="p-4 font-bold text-mRed">#3</td>
+                <td class="p-4 font-semibold">Action Parachute</td>
                 <td class="p-4">Ethan</td>
                 <td class="p-4">TX</td>
-                <td class="p-4 text-right font-bold text-mBlue">15.8s</td>
-              </tr>
-              <tr class="bg-white border-2 border-slate-200 shadow-sm rounded-2xl">
-                <td class="p-4 font-bold text-slate-500">#4</td>
-                <td class="p-4 font-bold">The Wooden Rover</td>
-                <td class="p-4">Sophia</td>
-                <td class="p-4">NY</td>
-                <td class="p-4 text-right font-bold text-mBlue">18.2s</td>
-              </tr>
-              <tr class="bg-white border-2 border-slate-200 shadow-sm rounded-2xl">
-                <td class="p-4 font-bold text-slate-500">#5</td>
-                <td class="p-4 font-bold">ZigZag Racer</td>
-                <td class="p-4">Liam</td>
-                <td class="p-4">FL</td>
-                <td class="p-4 text-right font-bold text-mBlue">20.5s</td>
+                <td class="p-4 text-right font-bold text-mBlue">5.15s</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
+
+      <!-- Upper Elementary Table -->
+      <div id="division-upper" class="bg-slate-50 border-4 border-mBlue rounded-2xl p-6 shadow-sm hidden">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-2">
+          <h2 class="text-2xl font-bold text-mBlue">Upper Elementary Leaderboard</h2>
+          <span class="bg-mRed text-white text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider">Goal: Longest Airtime</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-mBlue text-base font-bold">
+                <th class="p-3">Rank</th>
+                <th class="p-3">Submission Name</th>
+                <th class="p-3">First Name</th>
+                <th class="p-3">State</th>
+                <th class="p-3 text-right">Airtime</th>
+              </tr>
+            </thead>
+            <tbody class="text-base">
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+                <td class="p-4 font-bold text-mRed">#1</td>
+                <td class="p-4 font-semibold">Apex Catapult</td>
+                <td class="p-4">Sophia</td>
+                <td class="p-4">NY</td>
+                <td class="p-4 text-right font-bold text-mBlue">8.19s</td>
+              </tr>
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+                <td class="p-4 font-bold text-mBlue">#2</td>
+                <td class="p-4 font-semibold">Sling Glider</td>
+                <td class="p-4">Liam</td>
+                <td class="p-4">FL</td>
+                <td class="p-4 text-right font-bold text-mBlue">7.64s</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </section>
 
-    <!-- Tab 2: Competition Details -->
+    <!-- TAB 2: COMPETITION DETAILS -->
     <section id="content-competition" class="tab-content hidden space-y-6">
-      <div class="bg-slate-50 border-4 border-mRed rounded-3xl p-6 shadow-md">
-        <h2 class="text-3xl font-bold text-mRed mb-4">The Challenge: Maze Navigator</h2>
-        <div class="prose max-w-none text-slate-800 text-lg leading-relaxed space-y-4">
-          <p>Your goal is to design a physical or coded solution that navigates through our official competition maze in the shortest amount of time possible!</p>
-          
-          <div class="bg-white p-5 rounded-2xl border-2 border-mRed">
-            <h3 class="text-xl font-bold text-mBlue mb-2">How It Works:</h3>
-            <ul class="list-disc pl-6 space-y-2">
-              <li><strong>Step 1:</strong> Build your maze navigator using any approved materials or code templates.</li>
-              <li><strong>Step 2:</strong> Record a video of your project starting at the Entrance and clearing the Exit.</li>
-              <li><strong>Step 3:</strong> Submit your timing results and video link through our submission form.</li>
+      <div class="bg-slate-50 border-4 border-mRed rounded-2xl p-8 shadow-sm space-y-6">
+        <div>
+          <span class="text-mRed font-bold uppercase tracking-wider text-sm">Current Challenge</span>
+          <h2 class="text-4xl font-extrabold text-slate-900 mt-1">One Giant Leap</h2>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200">
+          <h3 class="text-xl font-bold text-mBlue mb-2">Overview</h3>
+          <p class="text-slate-700 leading-relaxed">
+            Students are tasked with designing a launching mechanism for an action figure of their choice. To ensure a safe landing for all toys, students will be judged on their ability to keep the figure airborne for as long as possible.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3">
+            <h3 class="text-xl font-bold text-mRed">Rules & Safety</h3>
+            <ul class="list-disc pl-5 text-slate-700 space-y-2 text-sm leading-relaxed">
+              <li><strong>Scoring:</strong> The competition is based strictly on airtime.</li>
+              <li><strong>Verification:</strong> Submissions are timed by participants and subject to review by the Abacistics admin team.</li>
+              <li><strong>Materials:</strong> All building materials are valid (wood, metal, plastic, Lego bricks, etc.).</li>
+              <li><strong>Safety Constraint:</strong> No chemical reactions may be used in launching mechanisms. Think creatively, but safely!</li>
             </ul>
           </div>
+
+          <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3">
+            <h3 class="text-xl font-bold text-mBlue">Submission Process</h3>
+            <p class="text-slate-700 text-sm leading-relaxed">To complete an official entry, students must submit three items:</p>
+            <ol class="list-decimal pl-5 text-slate-700 space-y-1 text-sm font-medium">
+              <li>An initial design sketch or blueprint (does not need to match the final build).</li>
+              <li>3 clear photos of the completed project.</li>
+              <li>A final video showcasing the official launch and airtime result.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="bg-mWood p-6 rounded-xl border-2 border-mBlue">
+          <h3 class="text-xl font-bold text-mBlue mb-2">Important Reminders for Parents</h3>
+          <p class="text-slate-800 text-sm leading-relaxed mb-3">
+            Parents are encouraged to assist, but not take over student projects. Assisting in drilling, using hot glue, and filming are all acceptable forms of assistance.
+          </p>
+          <div class="bg-white p-4 rounded-lg border border-stone-300">
+            <p class="text-sm font-semibold text-mRed">General Rule:</p>
+            <p class="text-sm italic text-slate-700">"Ask your kid if they think it's cheating. They are generally pretty good at knowing."</p>
+          </div>
+          <p class="text-xs text-slate-600 mt-3">
+            If you are unsure if an action violates this guideline, email us at <a href="mailto:Abacistics.admin@gmail.com" class="text-mBlue font-bold underline">Abacistics.admin@gmail.com</a>.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Tab 3: Design Highlights -->
+    <!-- TAB 3: DESIGN HIGHLIGHTS -->
     <section id="content-gallery" class="tab-content hidden space-y-6">
-      <div class="bg-slate-50 border-4 border-mBlue rounded-3xl p-6 shadow-md">
-        <h2 class="text-3xl font-bold text-mBlue mb-6">Student Design Gallery</h2>
+      <div class="bg-slate-50 border-4 border-mBlue rounded-2xl p-8 shadow-sm">
+        <h2 class="text-3xl font-extrabold text-mBlue mb-6">Student Design Gallery</h2>
         
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-white border-2 border-slate-200 rounded-2xl overflow-hidden shadow-sm">
-            <img src="https://picsum.photos/400/300?random=1" alt="Project 1" class="w-full h-40 object-cover" />
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+            <img src="https://picsum.photos/400/300?random=10" alt="Design Highlight 1" class="w-full h-44 object-cover" />
             <div class="p-4">
-              <h3 class="font-bold text-mRed text-lg">Wooden Gears</h3>
-              <p class="text-sm text-slate-600">Built by Alex (Age 8)</p>
+              <h3 class="font-bold text-mRed text-lg">Catapult Concept</h3>
+              <p class="text-xs text-slate-500 mt-1">Initial sketch vs. final build</p>
             </div>
           </div>
 
-          <div class="bg-white border-2 border-slate-200 rounded-2xl overflow-hidden shadow-sm">
-            <img src="https://picsum.photos/400/300?random=2" alt="Project 2" class="w-full h-40 object-cover" />
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+            <img src="https://picsum.photos/400/300?random=11" alt="Design Highlight 2" class="w-full h-44 object-cover" />
             <div class="p-4">
-              <h3 class="font-bold text-mBlue text-lg">Cardboard Maze</h3>
-              <p class="text-sm text-slate-600">Built by Sam (Age 10)</p>
+              <h3 class="font-bold text-mBlue text-lg">Parachute Rig</h3>
+              <p class="text-xs text-slate-500 mt-1">Fabric and lightweight frame setup</p>
             </div>
           </div>
 
-          <div class="bg-white border-2 border-slate-200 rounded-2xl overflow-hidden shadow-sm">
-            <img src="https://picsum.photos/400/300?random=3" alt="Project 3" class="w-full h-40 object-cover" />
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+            <img src="https://picsum.photos/400/300?random=12" alt="Design Highlight 3" class="w-full h-44 object-cover" />
             <div class="p-4">
-              <h3 class="font-bold text-mRed text-lg">Sensor Car</h3>
-              <p class="text-sm text-slate-600">Built by Jordan (Age 9)</p>
+              <h3 class="font-bold text-mRed text-lg">Tension Launcher</h3>
+              <p class="text-xs text-slate-500 mt-1">Rubber band mechanism assembly</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Tab 4: About Us -->
+    <!-- TAB 4: ABOUT US -->
     <section id="content-about" class="tab-content hidden space-y-6">
-      <div class="bg-slate-50 border-4 border-mRed rounded-3xl p-6 shadow-md">
-        <h2 class="text-3xl font-bold text-mRed mb-4">About Our Mission</h2>
-        <p class="text-lg leading-relaxed text-slate-800">
-          We believe engineering is for everyone! Inspired by hands-on learning, our mission is to empower young minds to experiment, build, fail forward, and discover the joy of problem-solving through friendly competition.
-        </p>
+      <div class="bg-slate-50 border-4 border-mRed rounded-2xl p-8 shadow-sm space-y-6">
+        <h2 class="text-3xl font-extrabold text-mRed">About Abacistics</h2>
+        
+        <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-4 text-slate-800 leading-relaxed">
+          <p>
+            We are a group of high school and college students dedicated to making hands-on engineering accessible, engaging, and welcoming for younger students.
+          </p>
+          <p>
+            The founders of Abacistics active competitors in various high-level robotics and engineering challenges—including <strong>FIRST Robotics Competition (FRC)</strong>, <strong>VEXU</strong>, <strong>V5RC</strong>, and <strong>Formula SAE (FSAE)</strong>. Having navigated these complex programs ourselves, we understand firsthand the immense rewards and the intimidation factor that comes with entering the world of engineering.
+          </p>
+          <p>
+            We created Abacistics to bridge that gap. By offering focused, friendly challenges, we aim to inspire the next generation of builders, problem solvers, and innovators early on. We have all had transformative experiences through engineering, and we hope that through Abacistics, you will too.
+          </p>
+        </div>
       </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-mWood py-6 text-center text-slate-600 text-sm font-semibold border-t-4 border-mBlue">
-    <p>© 2026 Junior Engineering Competition. Made for curious minds!</p>
+  <footer class="bg-mWood py-6 text-center text-slate-700 text-sm font-medium border-t-4 border-mBlue">
+    <p>© 2026 Abacistics. For students, by students.</p>
   </footer>
 
-  <!-- Tab Switch Script -->
+  <!-- Scripts -->
   <script>
+    // Tab Switching Logic
     function switchTab(tabName) {
-      // Hide all contents
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-      
-      // Reset all buttons to inactive state
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.className = 'tab-btn bg-mWood text-slate-700 text-xl font-bold px-6 py-3 rounded-2xl border-b-4 border-amber-300 hover:bg-amber-100 transition-all';
+        btn.className = 'tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all';
       });
 
-      // Show selected content
       document.getElementById('content-' + tabName).classList.remove('hidden');
 
-      // Highlight active button (alternating colors for fun look)
       const activeBtn = document.getElementById('tab-' + tabName);
       if (tabName === 'leaderboard' || tabName === 'gallery') {
-        activeBtn.className = 'tab-btn bg-mBlue text-white text-xl font-bold px-6 py-3 rounded-2xl border-b-4 border-blue-900 transition-all shadow-md';
+        activeBtn.className = 'tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 transition-all shadow-sm';
       } else {
-        activeBtn.className = 'tab-btn bg-mRed text-white text-xl font-bold px-6 py-3 rounded-2xl border-b-4 border-red-900 transition-all shadow-md';
+        activeBtn.className = 'tab-btn bg-mRed text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-red-900 transition-all shadow-sm';
+      }
+    }
+
+    // Leaderboard Division Switcher
+    function switchDivision(divName) {
+      const lowerDiv = document.getElementById('division-lower');
+      const upperDiv = document.getElementById('division-upper');
+      const lowerBtn = document.getElementById('div-btn-lower');
+      const upperBtn = document.getElementById('div-btn-upper');
+
+      if (divName === 'lower') {
+        lowerDiv.classList.remove('hidden');
+        upperDiv.classList.add('hidden');
+        lowerBtn.className = 'px-5 py-2 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900';
+        upperBtn.className = 'px-5 py-2 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200';
+      } else {
+        upperDiv.classList.remove('hidden');
+        lowerDiv.classList.add('hidden');
+        upperBtn.className = 'px-5 py-2 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900';
+        lowerBtn.className = 'px-5 py-2 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200';
       }
     }
   </script>
