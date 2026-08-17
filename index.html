@@ -33,12 +33,12 @@
 
   <!-- Top Announcement Bar -->
   <div class="bg-mRed text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center tracking-wide">
-    🚀 Summer Challenge Open: <strong>"One Giant Leap"</strong> is accepting submissions!
+    Summer Challenge Open: <strong>"One Giant Leap"</strong> is accepting submissions!
   </div>
 
   <!-- Header Banner -->
-  <header class="bg-mWood border-b-8 border-mBlue py-10 px-4 text-center shadow-sm">
-    <div class="max-w-6xl mx-auto">
+  <header class="bg-mWood border-b-8 border-mBlue py-10 px-6 sm:px-12 text-center shadow-sm w-full">
+    <div class="w-full">
       <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-2">
         <span class="text-mBlue">A</span><span class="text-mRed">b</span><span class="text-mBlue">a</span><span class="text-mRed">c</span><span class="text-mBlue">i</span><span class="text-mRed">s</span><span class="text-mRed">t</span><span class="text-mBlue">i</span><span class="text-mRed">c</span><span class="text-mRed">s</span>
       </h1>
@@ -47,7 +47,7 @@
   </header>
 
   <!-- Navigation Tabs -->
-  <nav class="max-w-6xl mx-auto w-full px-4 mt-8">
+  <nav class="w-full px-6 sm:px-12 mt-8">
     <div class="flex flex-wrap justify-center gap-3">
       <button onclick="switchTab('leaderboard')" id="tab-leaderboard" 
         class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
@@ -72,8 +72,8 @@
     </div>
   </nav>
 
-  <!-- Main Content Area -->
-  <main class="max-w-6xl mx-auto w-full px-4 my-8 flex-grow">
+  <!-- Main Content Area (Expanded Width) -->
+  <main class="w-full px-6 sm:px-12 my-8 flex-grow">
 
     <!-- TAB 1: LEADERBOARD -->
     <section id="content-leaderboard" class="tab-content block">
@@ -109,14 +109,13 @@
             </button>
           </div>
 
-          <!-- Lower Elementary Table (With Internal Scroll for Long Lists) -->
+          <!-- Lower Elementary Table -->
           <div id="division-lower" class="bg-slate-50 border-4 border-mBlue rounded-2xl p-5 shadow-sm">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
               <h3 class="text-xl font-bold text-mBlue">Lower Elementary Leaderboard</h3>
               <span class="bg-mRed text-white text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-wider">Goal: Longest Airtime</span>
             </div>
             
-            <!-- Scrollable Table Container -->
             <div class="overflow-x-auto max-h-[500px] overflow-y-auto pr-1">
               <table class="w-full text-left border-separate border-spacing-y-2">
                 <thead class="sticky top-0 bg-slate-50 z-10">
@@ -155,14 +154,13 @@
             </div>
           </div>
 
-          <!-- Upper Elementary Table (With Internal Scroll for Long Lists) -->
+          <!-- Upper Elementary Table -->
           <div id="division-upper" class="bg-slate-50 border-4 border-mBlue rounded-2xl p-5 shadow-sm hidden">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
               <h3 class="text-xl font-bold text-mBlue">Upper Elementary Leaderboard</h3>
               <span class="bg-mRed text-white text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-wider">Goal: Longest Airtime</span>
             </div>
             
-            <!-- Scrollable Table Container -->
             <div class="overflow-x-auto max-h-[500px] overflow-y-auto pr-1">
               <table class="w-full text-left border-separate border-spacing-y-2">
                 <thead class="sticky top-0 bg-slate-50 z-10">
@@ -196,7 +194,7 @@
 
         </div>
 
-        <!-- RIGHT COLUMN (1/3 width): Sticky Sidebar with Stats & Space Facts -->
+        <!-- RIGHT COLUMN (1/3 width): Sticky Sidebar -->
         <div class="space-y-6 lg:sticky lg:top-6">
           
           <!-- Impact Stats Grid -->
@@ -221,8 +219,7 @@
 
           <!-- Space Race Fun Facts Card Stack -->
           <div class="bg-slate-50 border-4 border-mRed rounded-2xl p-5 shadow-sm space-y-4">
-            <div class="flex items-center gap-2 border-b border-slate-200 pb-3">
-              <span class="text-xl">🌕</span>
+            <div class="border-b border-slate-200 pb-3">
               <h3 class="text-xl font-bold text-mRed">Space Race Fun Facts</h3>
             </div>
 
@@ -272,7 +269,7 @@
             <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
               <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Step 2</span>
               <h4 class="font-bold text-slate-800 mt-1">Record & Submit</h4>
-              <p class="text-xs text-slate-600 mt-1">Upload blueprint, photo, and video proof via our submission form.</p>
+              <p class="text-xs text-slate-600 mt-1">Submit your details and video proof via our entry form.</p>
             </div>
             <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
               <span class="text-xs font-bold text-mRed uppercase tracking-wider">Step 3</span>
@@ -303,12 +300,12 @@
 
           <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
             <h3 class="text-xl font-bold text-mBlue">Submission Process</h3>
-            <p class="text-slate-700 text-sm leading-relaxed">To complete an official entry, students must submit four items:</p>
+            <p class="text-slate-700 text-sm leading-relaxed">To complete an official entry, students must submit:</p>
             <ol class="list-decimal pl-5 text-slate-700 space-y-1 text-sm font-medium">
               <li>Division selection (Lower or Upper Elementary).</li>
-              <li>1 clear photo of the completed project.</li>
+              <li>Student and parent/guardian contact info.</li>
               <li>An unlisted YouTube video link showcasing the official launch and airtime result.</li>
-              <li>Media display consent form signed by parent/guardian.</li>
+              <li>Display consent signed by parent/guardian.</li>
             </ol>
           </div>
         </div>
@@ -321,7 +318,7 @@
             <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
               <summary class="font-bold text-slate-900 group-open:text-mBlue flex justify-between items-center">
                 <span>What size or weight should the action figure be?</span>
-                <span class="transition group-open:rotate-180">▼</span>
+                <span class="transition group-open:rotate-180">v</span>
               </summary>
               <p class="mt-2 text-slate-600 leading-relaxed">Any standard action figure or minifigure works! We recommend figures between 2 to 6 inches tall so they can easily attach to your launcher or parachute rig.</p>
             </details>
@@ -329,7 +326,7 @@
             <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
               <summary class="font-bold text-slate-900 group-open:text-mBlue flex justify-between items-center">
                 <span>How do I accurately measure and record airtime?</span>
-                <span class="transition group-open:rotate-180">▼</span>
+                <span class="transition group-open:rotate-180">v</span>
               </summary>
               <p class="mt-2 text-slate-600 leading-relaxed">Airtime is measured from the exact moment the figure leaves the launch mechanism until it touches the ground. Use a phone stopwatch while recording your video proof!</p>
             </details>
@@ -337,7 +334,7 @@
             <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
               <summary class="font-bold text-slate-900 group-open:text-mBlue flex justify-between items-center">
                 <span>How long does it take for a submission to appear on the leaderboard?</span>
-                <span class="transition group-open:rotate-180">▼</span>
+                <span class="transition group-open:rotate-180">v</span>
               </summary>
               <p class="mt-2 text-slate-600 leading-relaxed">The Abacistics admin team reviews all incoming entries for video verification within 24–48 hours before updating the official rankings.</p>
             </details>
@@ -345,7 +342,7 @@
             <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
               <summary class="font-bold text-slate-900 group-open:text-mBlue flex justify-between items-center">
                 <span>Can I submit more than one attempt if I improve my project?</span>
-                <span class="transition group-open:rotate-180">▼</span>
+                <span class="transition group-open:rotate-180">v</span>
               </summary>
               <p class="mt-2 text-slate-600 leading-relaxed">Yes! You can re-submit the form with a new video link at any point before the challenge deadline to update your score on the leaderboard.</p>
             </details>
@@ -376,11 +373,9 @@
           <p class="text-slate-600 text-sm mt-1">Fill out the official form below to enter the "One Giant Leap" engineering competition.</p>
         </div>
 
-        <!-- Formspree Native Web Form -->
         <form 
           action="https://formspree.io/f/mnpagypr" 
           method="POST" 
-          enctype="multipart/form-data" 
           class="space-y-6 bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
           
           <!-- Division Selection -->
@@ -437,18 +432,12 @@
             <input type="url" name="videoUrl" required class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-mBlue focus:outline-none" placeholder="https://youtube.com/watch?v=...">
           </div>
 
-          <div>
-            <label class="block text-sm font-bold text-slate-800 mb-1">Design Photo (Single Image) *</label>
-            <input type="file" name="attachment" accept="image/*" required class="w-full border border-slate-300 rounded-lg p-2 text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-mBlue file:text-white hover:file:bg-blue-700">
-            <p class="text-xs text-slate-500 mt-1">Upload 1 clear photo of the completed design (.jpg or .png).</p>
-          </div>
-
-          <!-- Media Consent Agreement -->
+          <!-- Display Consent Agreement -->
           <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
             <label class="flex items-start gap-3 cursor-pointer">
-              <input type="checkbox" name="mediaConsent" value="Agreed" required class="mt-1 w-4 h-4 text-mBlue accent-mBlue rounded" />
+              <input type="checkbox" name="displayConsent" value="Agreed" required class="mt-1 w-4 h-4 text-mBlue accent-mBlue rounded" />
               <span class="text-xs text-slate-700 leading-relaxed">
-                <strong>Media & Display Consent:</strong> I agree to allow Abacistics to feature the submitted photo, first name, state, and video link on the public leaderboard and site gallery.
+                <strong>Submission & Display Consent:</strong> I agree to allow Abacistics to feature the student's first name, state, submission title, airtime score, and video link on the public leaderboard.
               </span>
             </label>
           </div>
@@ -464,33 +453,27 @@
     <section id="content-gallery" class="tab-content hidden space-y-6">
       <div class="bg-slate-50 border-4 border-mRed rounded-2xl p-8 shadow-sm space-y-8">
         <div>
-          <h2 class="text-3xl font-extrabold text-mRed">Student Design Gallery</h2>
-          <p class="text-slate-600 text-sm mt-1">Explore creative build mechanisms from fellow competitors across the country.</p>
+          <h2 class="text-3xl font-extrabold text-mRed">Design Highlights</h2>
+          <p class="text-slate-600 text-sm mt-1">Explore popular engineering concepts and build ideas from competitors across the country.</p>
         </div>
         
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-            <img src="https://picsum.photos/400/300?random=10" alt="Design Highlight 1" class="w-full h-44 object-cover" />
-            <div class="p-4">
-              <h3 class="font-bold text-mRed text-lg">Catapult Concept</h3>
-              <p class="text-xs text-slate-500 mt-1">Initial sketch vs. final build</p>
-            </div>
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-2">
+            <span class="text-xs font-bold text-mRed uppercase tracking-wider">Concept #1</span>
+            <h3 class="font-bold text-slate-900 text-lg">Catapult & Sling Systems</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Utilizing elastic potential energy to propel payloads rapidly while deploying high-drag parachutes at peak height.</p>
           </div>
 
-          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-            <img src="https://picsum.photos/400/300?random=11" alt="Design Highlight 2" class="w-full h-44 object-cover" />
-            <div class="p-4">
-              <h3 class="font-bold text-mBlue text-lg">Parachute Rig</h3>
-              <p class="text-xs text-slate-500 mt-1">Fabric and lightweight frame setup</p>
-            </div>
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-2">
+            <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Concept #2</span>
+            <h3 class="font-bold text-slate-900 text-lg">High-Drag Canopy Rigs</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Lightweight plastic and fabric canopy designs engineered to maximize surface area and air resistance for prolonged airtime.</p>
           </div>
 
-          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-            <img src="https://picsum.photos/400/300?random=12" alt="Design Highlight 3" class="w-full h-44 object-cover" />
-            <div class="p-4">
-              <h3 class="font-bold text-mRed text-lg">Tension Launcher</h3>
-              <p class="text-xs text-slate-500 mt-1">Rubber band mechanism assembly</p>
-            </div>
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-2">
+            <span class="text-xs font-bold text-mRed uppercase tracking-wider">Concept #3</span>
+            <h3 class="font-bold text-slate-900 text-lg">Counterweight Launchers</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Lever-arm mechanisms leveraging gravity counterweights to achieve consistent trajectory releases without complex motors.</p>
           </div>
         </div>
 
@@ -542,8 +525,8 @@
   </main>
 
   <!-- Official Organization Footer -->
-  <footer class="bg-mWood text-slate-700 border-t-4 border-mBlue pt-10 pb-6 px-4">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8 text-sm">
+  <footer class="bg-mWood text-slate-700 border-t-4 border-mBlue pt-10 pb-6 px-6 sm:px-12 w-full">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8 text-sm">
       <div class="space-y-2">
         <h4 class="font-extrabold text-mBlue text-lg">Abacistics</h4>
         <p class="text-xs leading-relaxed text-slate-600">
@@ -568,7 +551,7 @@
       </div>
     </div>
 
-    <div class="max-w-6xl mx-auto border-t border-stone-300 pt-4 text-center text-xs text-slate-500 font-medium">
+    <div class="border-t border-stone-300 pt-4 text-center text-xs text-slate-500 font-medium">
       <p>© 2026 Abacistics. For students, by students.</p>
     </div>
   </footer>
