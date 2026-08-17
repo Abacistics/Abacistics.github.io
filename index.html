@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -52,6 +52,10 @@
         class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
         Competition Details
       </button>
+      <button onclick="switchTab('submit')" id="tab-submit" 
+        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
+        Submit Project
+      </button>
       <button onclick="switchTab('gallery')" id="tab-gallery" 
         class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
         Design Highlights
@@ -92,7 +96,7 @@
                 <th class="p-3">Rank</th>
                 <th class="p-3">Submission Name</th>
                 <th class="p-3">First Name</th>
-                <th class="p-3">State</th>
+                <th class="p-3">State / Country</th>
                 <th class="p-3 text-right">Airtime</th>
               </tr>
             </thead>
@@ -136,7 +140,7 @@
                 <th class="p-3">Rank</th>
                 <th class="p-3">Submission Name</th>
                 <th class="p-3">First Name</th>
-                <th class="p-3">State</th>
+                <th class="p-3">State / Country</th>
                 <th class="p-3 text-right">Airtime</th>
               </tr>
             </thead>
@@ -184,17 +188,18 @@
               <li><strong>Scoring:</strong> The competition is based strictly on airtime.</li>
               <li><strong>Verification:</strong> Submissions are timed by participants and subject to review by the Abacistics admin team.</li>
               <li><strong>Materials:</strong> All building materials are valid (wood, metal, plastic, Lego bricks, etc.).</li>
+              <li><strong>Budget Limit:</strong> All projects must cost less than $100. This rule will only be used with administrative discretion. In cases where a project appears to be in violation, an admin may ask for a list of material costs before approving it. <em>Note: This rule is not intended to be punitive, and borderline cases will sometimes still be approved. This rule serves only to keep the competition landscape fair.</em></li>
               <li><strong>Safety Constraint:</strong> No chemical reactions may be used in launching mechanisms. Think creatively, but safely!</li>
             </ul>
           </div>
 
           <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3">
             <h3 class="text-xl font-bold text-mBlue">Submission Process</h3>
-            <p class="text-slate-700 text-sm leading-relaxed">To complete an official entry, students must submit three items:</p>
+            <p class="text-slate-700 text-sm leading-relaxed">To complete an official entry, students must submit four items:</p>
             <ol class="list-decimal pl-5 text-slate-700 space-y-1 text-sm font-medium">
               <li>An initial design sketch or blueprint (does not need to match the final build).</li>
               <li>3 clear photos of the completed project.</li>
-              <li>A final video showcasing the official launch and airtime result.</li>
+              <li>An unlisted YouTube video link showcasing the official launch and airtime result.</li>
             </ol>
           </div>
         </div>
@@ -215,7 +220,30 @@
       </div>
     </section>
 
-    <!-- TAB 3: DESIGN HIGHLIGHTS -->
+    <!-- TAB 3: SUBMIT PROJECT (EMBEDDED GOOGLE FORM) -->
+    <section id="content-submit" class="tab-content hidden space-y-6">
+      <div class="bg-slate-50 border-4 border-mBlue rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+        <div>
+          <h2 class="text-3xl font-extrabold text-mBlue">Submit Your Project</h2>
+          <p class="text-slate-600 text-sm mt-1">Complete the Google Form below to submit your entry for the "One Giant Leap" competition.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-inner">
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfa225q8G0OPA0Dfy__GPiaspHXz1mzFZOD1Cx4DwCM5osk-g/viewform?embedded=true" 
+            width="100%" 
+            height="1000" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0" 
+            class="w-full min-h-[900px] border-0">
+            Loading submission form...
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: DESIGN HIGHLIGHTS -->
     <section id="content-gallery" class="tab-content hidden space-y-6">
       <div class="bg-slate-50 border-4 border-mBlue rounded-2xl p-8 shadow-sm">
         <h2 class="text-3xl font-extrabold text-mBlue mb-6">Student Design Gallery</h2>
@@ -248,7 +276,7 @@
       </div>
     </section>
 
-    <!-- TAB 4: ABOUT US -->
+    <!-- TAB 5: ABOUT US -->
     <section id="content-about" class="tab-content hidden space-y-6">
       <div class="bg-slate-50 border-4 border-mRed rounded-2xl p-8 shadow-sm space-y-6">
         <h2 class="text-3xl font-extrabold text-mRed">About Abacistics</h2>
@@ -258,7 +286,7 @@
             We are a group of high school and college students dedicated to making hands-on engineering accessible, engaging, and welcoming for younger students.
           </p>
           <p>
-            The founders of Abacistics active competitors in various high-level robotics and engineering challenges—including <strong>FIRST Robotics Competition (FRC)</strong>, <strong>VEXU</strong>, <strong>V5RC</strong>, and <strong>Formula SAE (FSAE)</strong>. Having navigated these complex programs ourselves, we understand firsthand the immense rewards and the intimidation factor that comes with entering the world of engineering.
+            The founders of Abacistics are active competitors in various high-level robotics and engineering challenges—including <strong>FIRST Robotics Competition (FRC)</strong>, <strong>VEXU</strong>, <strong>V5RC</strong>, and <strong>Formula SAE (FSAE)</strong>. Having navigated these complex programs ourselves, we understand firsthand the immense rewards and the intimidation factor that comes with entering the world of engineering.
           </p>
           <p>
             We created Abacistics to bridge that gap. By offering focused, friendly challenges, we aim to inspire the next generation of builders, problem solvers, and innovators early on. We have all had transformative experiences through engineering, and we hope that through Abacistics, you will too.
@@ -286,7 +314,7 @@
       document.getElementById('content-' + tabName).classList.remove('hidden');
 
       const activeBtn = document.getElementById('tab-' + tabName);
-      if (tabName === 'leaderboard' || tabName === 'gallery') {
+      if (tabName === 'leaderboard' || tabName === 'gallery' || tabName === 'submit') {
         activeBtn.className = 'tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 transition-all shadow-sm';
       } else {
         activeBtn.className = 'tab-btn bg-mRed text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-red-900 transition-all shadow-sm';
