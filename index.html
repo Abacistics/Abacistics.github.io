@@ -1,11 +1,11 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abacistics | Engineering Competitions</title>
   
-  <!-- Google Font: Outfit (Clean, modern geometric sans-serif) -->
+  <!-- Google Font: Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -41,27 +41,32 @@
     </div>
   </header>
 
-  <!-- Navigation Tabs -->
+  <!-- Navigation Tabs (Alternating Blue/Red sequence) -->
   <nav class="max-w-5xl mx-auto w-full px-4 mt-8">
     <div class="flex flex-wrap justify-center gap-3">
+      <!-- Tab 1: Blue -->
       <button onclick="switchTab('leaderboard')" id="tab-leaderboard" 
-        class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 transition-all shadow-sm">
+        class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
         Leaderboard
       </button>
+      <!-- Tab 2: Red -->
       <button onclick="switchTab('competition')" id="tab-competition" 
-        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
+        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200">
         Competition Details
       </button>
+      <!-- Tab 3: Blue -->
       <button onclick="switchTab('submit')" id="tab-submit" 
-        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
+        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200">
         Submit Project
       </button>
+      <!-- Tab 4: Red -->
       <button onclick="switchTab('gallery')" id="tab-gallery" 
-        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
+        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200">
         Design Highlights
       </button>
+      <!-- Tab 5: Blue -->
       <button onclick="switchTab('about')" id="tab-about" 
-        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all">
+        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200">
         About Us
       </button>
     </div>
@@ -73,12 +78,27 @@
     <!-- TAB 1: LEADERBOARD -->
     <section id="content-leaderboard" class="tab-content block space-y-8">
       
+      <!-- Competition Banner -->
+      <div class="bg-slate-50 border-4 border-mBlue rounded-2xl p-6 sm:p-8 shadow-sm space-y-3">
+        <div class="inline-block bg-mWood px-4 py-1 rounded-full border border-mBlue/30 text-xs font-bold text-mBlue uppercase tracking-widest mb-1">
+          Current Competition
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          <span class="text-mBlue">O</span><span class="text-mRed">n</span><span class="text-mBlue">e</span> 
+          <span class="text-mRed">G</span><span class="text-mBlue">i</span><span class="text-mRed">a</span><span class="text-mBlue">n</span><span class="text-mRed">t</span> 
+          <span class="text-mBlue">L</span><span class="text-mRed">e</span><span class="text-mBlue">a</span><span class="text-mRed">p</span>
+        </h2>
+        <p class="text-slate-700 text-base sm:text-lg leading-relaxed max-w-3xl">
+          In honor of the first successful landing of a person on the moon, the Abacistics summer challenge tasks students with creating both a launching mechanism and a soft-landing system for an action figure. Competitors aim to keep their figure airborne for as long as possible before making a safe touchdown!
+        </p>
+      </div>
+
       <!-- Division Switcher -->
       <div class="flex justify-center gap-4">
-        <button onclick="switchDivision('lower')" id="div-btn-lower" class="px-5 py-2 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900">
+        <button onclick="switchDivision('lower')" id="div-btn-lower" class="px-5 py-2.5 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900 shadow-sm hover:-translate-y-0.5 transition-all">
           Lower Elementary Division
         </button>
-        <button onclick="switchDivision('upper')" id="div-btn-upper" class="px-5 py-2 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200">
+        <button onclick="switchDivision('upper')" id="div-btn-upper" class="px-5 py-2.5 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 transition-all">
           Upper Elementary Division
         </button>
       </div>
@@ -86,7 +106,7 @@
       <!-- Lower Elementary Table -->
       <div id="division-lower" class="bg-slate-50 border-4 border-mBlue rounded-2xl p-6 shadow-sm">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-2">
-          <h2 class="text-2xl font-bold text-mBlue">Lower Elementary Leaderboard</h2>
+          <h3 class="text-2xl font-bold text-mBlue">Lower Elementary Leaderboard</h3>
           <span class="bg-mRed text-white text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider">Goal: Longest Airtime</span>
         </div>
         <div class="overflow-x-auto">
@@ -101,21 +121,21 @@
               </tr>
             </thead>
             <tbody class="text-base">
-              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg hover:shadow-md hover:scale-[1.01] transition-all duration-150">
                 <td class="p-4 font-bold text-mRed">#1</td>
                 <td class="p-4 font-semibold">Sky Hopper 1000</td>
                 <td class="p-4">Leo</td>
                 <td class="p-4">OH</td>
                 <td class="p-4 text-right font-bold text-mBlue">6.42s</td>
               </tr>
-              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg hover:shadow-md hover:scale-[1.01] transition-all duration-150">
                 <td class="p-4 font-bold text-mBlue">#2</td>
                 <td class="p-4 font-semibold">Lego Launcher</td>
                 <td class="p-4">Maya</td>
                 <td class="p-4">CA</td>
                 <td class="p-4 text-right font-bold text-mBlue">5.81s</td>
               </tr>
-              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg hover:shadow-md hover:scale-[1.01] transition-all duration-150">
                 <td class="p-4 font-bold text-mRed">#3</td>
                 <td class="p-4 font-semibold">Action Parachute</td>
                 <td class="p-4">Ethan</td>
@@ -130,7 +150,7 @@
       <!-- Upper Elementary Table -->
       <div id="division-upper" class="bg-slate-50 border-4 border-mBlue rounded-2xl p-6 shadow-sm hidden">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-2">
-          <h2 class="text-2xl font-bold text-mBlue">Upper Elementary Leaderboard</h2>
+          <h3 class="text-2xl font-bold text-mBlue">Upper Elementary Leaderboard</h3>
           <span class="bg-mRed text-white text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider">Goal: Longest Airtime</span>
         </div>
         <div class="overflow-x-auto">
@@ -145,14 +165,14 @@
               </tr>
             </thead>
             <tbody class="text-base">
-              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg hover:shadow-md hover:scale-[1.01] transition-all duration-150">
                 <td class="p-4 font-bold text-mRed">#1</td>
                 <td class="p-4 font-semibold">Apex Catapult</td>
                 <td class="p-4">Sophia</td>
                 <td class="p-4">NY</td>
                 <td class="p-4 text-right font-bold text-mBlue">8.19s</td>
               </tr>
-              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg">
+              <tr class="bg-white border border-slate-200 shadow-sm rounded-lg hover:shadow-md hover:scale-[1.01] transition-all duration-150">
                 <td class="p-4 font-bold text-mBlue">#2</td>
                 <td class="p-4 font-semibold">Sling Glider</td>
                 <td class="p-4">Liam</td>
@@ -174,7 +194,7 @@
           <h2 class="text-4xl font-extrabold text-slate-900 mt-1">One Giant Leap</h2>
         </div>
 
-        <div class="bg-white p-6 rounded-xl border border-slate-200">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
           <h3 class="text-xl font-bold text-mBlue mb-2">Overview</h3>
           <p class="text-slate-700 leading-relaxed">
             Students are tasked with designing a launching mechanism for an action figure of their choice. To ensure a safe landing for all toys, students will be judged on their ability to keep the figure airborne for as long as possible.
@@ -182,7 +202,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
             <h3 class="text-xl font-bold text-mRed">Rules & Safety</h3>
             <ul class="list-disc pl-5 text-slate-700 space-y-2 text-sm leading-relaxed">
               <li><strong>Scoring:</strong> The competition is based strictly on airtime.</li>
@@ -193,7 +213,7 @@
             </ul>
           </div>
 
-          <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
             <h3 class="text-xl font-bold text-mBlue">Submission Process</h3>
             <p class="text-slate-700 text-sm leading-relaxed">To complete an official entry, students must submit four items:</p>
             <ol class="list-decimal pl-5 text-slate-700 space-y-1 text-sm font-medium">
@@ -201,6 +221,45 @@
               <li>3 clear photos of the completed project.</li>
               <li>An unlisted YouTube video link showcasing the official launch and airtime result.</li>
             </ol>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <h3 class="text-2xl font-bold text-mBlue">Frequently Asked Questions (FAQ)</h3>
+          
+          <div class="space-y-3 text-slate-700 text-sm">
+            <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
+              <summary class="font-bold text-slate-900 group-open:text-mBlue flex justify-between items-center">
+                <span>What size or weight should the action figure be?</span>
+                <span class="transition group-open:rotate-180">▼</span>
+              </summary>
+              <p class="mt-2 text-slate-600 leading-relaxed">Any standard action figure or minifigure works! We recommend figures between 2 to 6 inches tall so they can easily attach to your launcher or parachute rig.</p>
+            </details>
+
+            <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
+              <summary class="font-bold text-slate-900 group-open:text-mBlue flex justify-between items-center">
+                <span>How do I accurately measure and record airtime?</span>
+                <span class="transition group-open:rotate-180">▼</span>
+              </summary>
+              <p class="mt-2 text-slate-600 leading-relaxed">Airtime is measured from the exact moment the figure leaves the launch mechanism until it touches the ground. Use a phone stopwatch while recording your video proof!</p>
+            </details>
+
+            <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
+              <summary class="font-bold text-slate-900 group-open:text-mBlue flex justify-between items-center">
+                <span>How long does it take for a submission to appear on the leaderboard?</span>
+                <span class="transition group-open:rotate-180">▼</span>
+              </summary>
+              <p class="mt-2 text-slate-600 leading-relaxed">The Abacistics admin team reviews all incoming entries for video verification within 24–48 hours before updating the official rankings.</p>
+            </details>
+
+            <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
+              <summary class="font-bold text-slate-900 group-open:text-mBlue flex justify-between items-center">
+                <span>Can I submit more than one attempt if I improve my project?</span>
+                <span class="transition group-open:rotate-180">▼</span>
+              </summary>
+              <p class="mt-2 text-slate-600 leading-relaxed">Yes! You can re-submit the form with a new video link at any point before the challenge deadline to update your score on the leaderboard.</p>
+            </details>
           </div>
         </div>
 
@@ -220,7 +279,7 @@
       </div>
     </section>
 
-    <!-- TAB 3: SUBMIT PROJECT (EMBEDDED GOOGLE FORM) -->
+    <!-- TAB 3: SUBMIT PROJECT -->
     <section id="content-submit" class="tab-content hidden space-y-6">
       <div class="bg-slate-50 border-4 border-mBlue rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
         <div>
@@ -245,11 +304,11 @@
 
     <!-- TAB 4: DESIGN HIGHLIGHTS -->
     <section id="content-gallery" class="tab-content hidden space-y-6">
-      <div class="bg-slate-50 border-4 border-mBlue rounded-2xl p-8 shadow-sm">
-        <h2 class="text-3xl font-extrabold text-mBlue mb-6">Student Design Gallery</h2>
+      <div class="bg-slate-50 border-4 border-mRed rounded-2xl p-8 shadow-sm">
+        <h2 class="text-3xl font-extrabold text-mRed mb-6">Student Design Gallery</h2>
         
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
             <img src="https://picsum.photos/400/300?random=10" alt="Design Highlight 1" class="w-full h-44 object-cover" />
             <div class="p-4">
               <h3 class="font-bold text-mRed text-lg">Catapult Concept</h3>
@@ -257,7 +316,7 @@
             </div>
           </div>
 
-          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
             <img src="https://picsum.photos/400/300?random=11" alt="Design Highlight 2" class="w-full h-44 object-cover" />
             <div class="p-4">
               <h3 class="font-bold text-mBlue text-lg">Parachute Rig</h3>
@@ -265,7 +324,7 @@
             </div>
           </div>
 
-          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
             <img src="https://picsum.photos/400/300?random=12" alt="Design Highlight 3" class="w-full h-44 object-cover" />
             <div class="p-4">
               <h3 class="font-bold text-mRed text-lg">Tension Launcher</h3>
@@ -278,10 +337,10 @@
 
     <!-- TAB 5: ABOUT US -->
     <section id="content-about" class="tab-content hidden space-y-6">
-      <div class="bg-slate-50 border-4 border-mRed rounded-2xl p-8 shadow-sm space-y-6">
-        <h2 class="text-3xl font-extrabold text-mRed">About Abacistics</h2>
+      <div class="bg-slate-50 border-4 border-mBlue rounded-2xl p-8 shadow-sm space-y-6">
+        <h2 class="text-3xl font-extrabold text-mBlue">About Abacistics</h2>
         
-        <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-4 text-slate-800 leading-relaxed">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-4 text-slate-800 leading-relaxed shadow-sm">
           <p>
             We are a group of high school and college students dedicated to making hands-on engineering accessible, engaging, and welcoming for younger students.
           </p>
@@ -304,20 +363,31 @@
 
   <!-- Scripts -->
   <script>
-    // Tab Switching Logic
+    // Strict Alternating Color Scheme Map for Active Tabs
+    // 1: Blue, 2: Red, 3: Blue, 4: Red, 5: Blue
+    const tabColorMap = {
+      'leaderboard': 'mBlue',
+      'competition': 'mRed',
+      'submit': 'mBlue',
+      'gallery': 'mRed',
+      'about': 'mBlue'
+    };
+
     function switchTab(tabName) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.className = 'tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 transition-all';
+        btn.className = 'tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200';
       });
 
       document.getElementById('content-' + tabName).classList.remove('hidden');
 
       const activeBtn = document.getElementById('tab-' + tabName);
-      if (tabName === 'leaderboard' || tabName === 'gallery' || tabName === 'submit') {
-        activeBtn.className = 'tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 transition-all shadow-sm';
+      const color = tabColorMap[tabName];
+      
+      if (color === 'mBlue') {
+        activeBtn.className = 'tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200';
       } else {
-        activeBtn.className = 'tab-btn bg-mRed text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-red-900 transition-all shadow-sm';
+        activeBtn.className = 'tab-btn bg-mRed text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-red-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200';
       }
     }
 
@@ -331,13 +401,13 @@
       if (divName === 'lower') {
         lowerDiv.classList.remove('hidden');
         upperDiv.classList.add('hidden');
-        lowerBtn.className = 'px-5 py-2 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900';
-        upperBtn.className = 'px-5 py-2 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200';
+        lowerBtn.className = 'px-5 py-2.5 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900 shadow-sm hover:-translate-y-0.5 transition-all';
+        upperBtn.className = 'px-5 py-2.5 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 transition-all';
       } else {
         upperDiv.classList.remove('hidden');
         lowerDiv.classList.add('hidden');
-        upperBtn.className = 'px-5 py-2 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900';
-        lowerBtn.className = 'px-5 py-2 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200';
+        upperBtn.className = 'px-5 py-2.5 rounded-lg font-bold bg-mBlue text-white border-b-2 border-blue-900 shadow-sm hover:-translate-y-0.5 transition-all';
+        lowerBtn.className = 'px-5 py-2.5 rounded-lg font-bold bg-stone-100 text-slate-600 border-b-2 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 transition-all';
       }
     }
   </script>
