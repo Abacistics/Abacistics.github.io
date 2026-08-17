@@ -29,10 +29,10 @@
     }
   </script>
   <style>
-    /* Abacus Pattern Background: Subtle light-gray rods & diamond/soroban beads on off-white */
+    /* Abacus Pattern Background: Subtle tan background with circular, semi-transparent red/blue beads */
     .bg-abacus-pattern {
-      background-color: #f8fafc;
-      background-image: url("data:image/svg+xml,%3Csvg width='120' height='240' viewBox='0 0 120 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3C!-- Vertical Rods --%3E%3Cpath d='M30 0v240M90 0v240' stroke='%23e2e8f0' stroke-width='2' stroke-dasharray='none'/%3E%3C!-- Beam / Horizontal Divider Bar --%3E%3Cpath d='M0 60h120M0 180h120' stroke='%23cbd5e1' stroke-width='4'/%3E%3C!-- Upper Deck Beads (Single Bead per Rod) --%3E%3Cpolygon points='30,15 42,27 30,39 18,27' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='2'/%3E%3Cpolygon points='90,30 102,42 90,54 78,42' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='2'/%3E%3C!-- Lower Deck Beads (Grouped Beads) --%3E%3Cpolygon points='30,80 42,92 30,104 18,92' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='2'/%3E%3Cpolygon points='30,106 42,118 30,130 18,118' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='2'/%3E%3Cpolygon points='30,132 42,144 30,156 18,144' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='2'/%3E%3Cpolygon points='90,110 102,122 90,134 78,122' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='2'/%3E%3Cpolygon points='90,136 102,148 90,160 78,148' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+      background-color: #F4EAD5;
+      background-image: url("data:image/svg+xml,%3Csvg width='120' height='240' viewBox='0 0 120 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3C!-- Vertical Rods --%3E%3Cpath d='M30 0v240M90 0v240' stroke='%23cbd5e1' stroke-width='2'/%3E%3C!-- Beam / Horizontal Divider Bar --%3E%3Cpath d='M0 60h120M0 180h120' stroke='%2394a3b8' stroke-width='3'/%3E%3C!-- Upper Deck Circular Beads (Semi-transparent Red & Blue) --%3E%3Ccircle cx='30' cy='27' r='14' fill='rgba(217, 43, 43, 0.35)' stroke='%2394a3b8' stroke-width='1.5'/%3E%3Ccircle cx='90' cy='42' r='14' fill='rgba(0, 119, 217, 0.35)' stroke='%2394a3b8' stroke-width='1.5'/%3E%3C!-- Lower Deck Circular Beads --%3E%3Ccircle cx='30' cy='92' r='14' fill='rgba(0, 119, 217, 0.35)' stroke='%2394a3b8' stroke-width='1.5'/%3E%3Ccircle cx='30' cy='118' r='14' fill='rgba(217, 43, 43, 0.35)' stroke='%2394a3b8' stroke-width='1.5'/%3E%3Ccircle cx='30' cy='144' r='14' fill='rgba(0, 119, 217, 0.35)' stroke='%2394a3b8' stroke-width='1.5'/%3E%3Ccircle cx='90' cy='122' r='14' fill='rgba(217, 43, 43, 0.35)' stroke='%2394a3b8' stroke-width='1.5'/%3E%3Ccircle cx='90' cy='148' r='14' fill='rgba(0, 119, 217, 0.35)' stroke='%2394a3b8' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E");
       background-repeat: repeat;
     }
   </style>
@@ -41,11 +41,11 @@
 
   <!-- Top Announcement Bar -->
   <div class="bg-mRed text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center tracking-wide">
-    Summer Challenge Open: <strong>"One Giant Leap"</strong> is accepting submissions!
+    Summer Challenge Open: <strong>"<span class="text-mBlue">O</span><span class="text-mRed">n</span><span class="text-mBlue">e</span> <span class="text-mRed">G</span><span class="text-mBlue">i</span><span class="text-mBlue">a</span><span class="text-mRed">n</span><span class="text-mRed">t</span> <span class="text-mRed">L</span><span class="text-mBlue">e</span><span class="text-mBlue">a</span><span class="text-mRed">p</span>"</strong> is accepting submissions!
   </div>
 
   <!-- Header Banner -->
-  <header class="bg-mWood border-b-8 border-mBlue py-10 px-6 sm:px-12 text-center shadow-sm w-full">
+  <header class="bg-mWood/90 backdrop-blur-sm border-b-8 border-mBlue py-10 px-12 sm:px-28 lg:px-44 text-center shadow-sm w-full">
     <div class="w-full">
       <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-2">
         <span class="text-mBlue">A</span><span class="text-mRed">b</span><span class="text-mBlue">a</span><span class="text-mRed">c</span><span class="text-mBlue">i</span><span class="text-mRed">s</span><span class="text-mRed">t</span><span class="text-mBlue">i</span><span class="text-mRed">c</span><span class="text-mRed">s</span>
@@ -55,33 +55,33 @@
   </header>
 
   <!-- Navigation Tabs -->
-  <nav class="w-full px-6 sm:px-12 mt-8">
+  <nav class="w-full px-12 sm:px-28 lg:px-44 mt-8">
     <div class="flex flex-wrap justify-center gap-3">
       <button onclick="switchTab('leaderboard')" id="tab-leaderboard" 
-        class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
+        class="tab-btn bg-mRed text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-red-900 shadow-md hover:-translate-y-0.5 transition-all duration-200">
         Leaderboard
       </button>
       <button onclick="switchTab('competition')" id="tab-competition" 
-        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200">
+        class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:bg-mRed hover:border-red-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
         Competition Details
       </button>
       <button onclick="switchTab('submit')" id="tab-submit" 
-        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200">
+        class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:bg-mRed hover:border-red-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
         Submit Project
       </button>
       <button onclick="switchTab('gallery')" id="tab-gallery" 
-        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200">
+        class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:bg-mRed hover:border-red-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
         Design Highlights
       </button>
       <button onclick="switchTab('about')" id="tab-about" 
-        class="tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200">
+        class="tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:bg-mRed hover:border-red-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
         About Us
       </button>
     </div>
   </nav>
 
-  <!-- Main Content Area (Expanded Width) -->
-  <main class="w-full px-6 sm:px-12 my-8 flex-grow">
+  <!-- Main Content Area -->
+  <main class="w-full px-12 sm:px-28 lg:px-44 my-8 flex-grow">
 
     <!-- TAB 1: LEADERBOARD -->
     <section id="content-leaderboard" class="tab-content block">
@@ -89,7 +89,7 @@
       <!-- 2-Column Desktop Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
         
-        <!-- LEFT COLUMN (2/3 width): Challenge Info & Leaderboard Table -->
+        <!-- LEFT COLUMN: Challenge Info & Leaderboard Table -->
         <div class="lg:col-span-2 space-y-6">
           
           <!-- Competition Banner -->
@@ -99,8 +99,8 @@
             </div>
             <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
               <span class="text-mBlue">O</span><span class="text-mRed">n</span><span class="text-mBlue">e</span> 
-              <span class="text-mRed">G</span><span class="text-mBlue">i</span><span class="text-mRed">a</span><span class="text-mBlue">n</span><span class="text-mRed">t</span> 
-              <span class="text-mBlue">L</span><span class="text-mRed">e</span><span class="text-mBlue">a</span><span class="text-mRed">p</span>
+              <span class="text-mRed">G</span><span class="text-mBlue">i</span><span class="text-mBlue">a</span><span class="text-mRed">n</span><span class="text-mRed">t</span> 
+              <span class="text-mRed">L</span><span class="text-mBlue">e</span><span class="text-mBlue">a</span><span class="text-mRed">p</span>
             </h2>
             <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
               In honor of the first moon landing, design a launching mechanism and soft-landing system for an action figure. Keep your figure airborne as long as possible for a safe touchdown!
@@ -202,7 +202,7 @@
 
         </div>
 
-        <!-- RIGHT COLUMN (1/3 width): Sticky Sidebar -->
+        <!-- RIGHT COLUMN: Sticky Sidebar -->
         <div class="space-y-6 lg:sticky lg:top-6">
           
           <!-- Impact Stats Grid -->
@@ -263,7 +263,11 @@
       <div class="bg-white/90 backdrop-blur-sm border-4 border-mRed rounded-2xl p-8 shadow-sm space-y-8">
         <div>
           <span class="text-mRed font-bold uppercase tracking-wider text-sm">Current Challenge</span>
-          <h2 class="text-4xl font-extrabold text-slate-900 mt-1">One Giant Leap</h2>
+          <h2 class="text-4xl font-extrabold text-slate-900 mt-1">
+            <span class="text-mBlue">O</span><span class="text-mRed">n</span><span class="text-mBlue">e</span> 
+            <span class="text-mRed">G</span><span class="text-mBlue">i</span><span class="text-mBlue">a</span><span class="text-mRed">n</span><span class="text-mRed">t</span> 
+            <span class="text-mRed">L</span><span class="text-mBlue">e</span><span class="text-mBlue">a</span><span class="text-mRed">p</span>
+          </h2>
         </div>
 
         <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm">
@@ -378,7 +382,9 @@
       <div class="bg-white/90 backdrop-blur-sm border-4 border-mBlue rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
         <div>
           <h2 class="text-3xl font-extrabold text-mBlue">Submit Your Project</h2>
-          <p class="text-slate-600 text-sm mt-1">Fill out the official form below to enter the "One Giant Leap" engineering competition.</p>
+          <p class="text-slate-600 text-sm mt-1">
+            Fill out the official form below to enter the "<strong><span class="text-mBlue">O</span><span class="text-mRed">n</span><span class="text-mBlue">e</span> <span class="text-mRed">G</span><span class="text-mBlue">i</span><span class="text-mBlue">a</span><span class="text-mRed">n</span><span class="text-mRed">t</span> <span class="text-mRed">L</span><span class="text-mBlue">e</span><span class="text-mBlue">a</span><span class="text-mRed">p</span></strong>" engineering competition.
+          </p>
         </div>
 
         <form 
@@ -450,7 +456,7 @@
             </label>
           </div>
 
-          <button type="submit" class="w-full bg-mBlue text-white font-bold py-3.5 rounded-xl hover:bg-blue-700 transition-all shadow-sm">
+          <button type="submit" class="w-full bg-mBlue text-white font-bold py-3.5 rounded-xl hover:bg-mRed transition-all shadow-sm">
             Submit Entry
           </button>
         </form>
@@ -533,7 +539,7 @@
   </main>
 
   <!-- Official Organization Footer -->
-  <footer class="bg-mWood text-slate-700 border-t-4 border-mBlue pt-10 pb-6 px-6 sm:px-12 w-full">
+  <footer class="bg-mWood/90 backdrop-blur-sm text-slate-700 border-t-4 border-mBlue pt-10 pb-6 px-12 sm:px-28 lg:px-44 w-full">
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8 text-sm">
       <div class="space-y-2">
         <h4 class="font-extrabold text-mBlue text-lg">Abacistics</h4>
@@ -545,17 +551,17 @@
       <div class="space-y-2">
         <h4 class="font-bold text-slate-900 text-base">Quick Links</h4>
         <ul class="space-y-1 text-xs font-semibold">
-          <li><button onclick="switchTab('leaderboard')" class="hover:text-mBlue">Official Leaderboard</button></li>
-          <li><button onclick="switchTab('competition')" class="hover:text-mBlue">Rules & Guidelines</button></li>
-          <li><button onclick="switchTab('submit')" class="hover:text-mBlue">Submit Entry</button></li>
-          <li><button onclick="switchTab('about')" class="hover:text-mBlue">About Our Team</button></li>
+          <li><button onclick="switchTab('leaderboard')" class="hover:text-mRed transition-colors">Official Leaderboard</button></li>
+          <li><button onclick="switchTab('competition')" class="hover:text-mRed transition-colors">Rules & Guidelines</button></li>
+          <li><button onclick="switchTab('submit')" class="hover:text-mRed transition-colors">Submit Entry</button></li>
+          <li><button onclick="switchTab('about')" class="hover:text-mRed transition-colors">About Our Team</button></li>
         </ul>
       </div>
 
       <div class="space-y-2">
         <h4 class="font-bold text-slate-900 text-base">Contact & Support</h4>
         <p class="text-xs text-slate-600">Have questions about rules or submissions?</p>
-        <a href="mailto:Abacistics.admin@gmail.com" class="inline-block text-xs font-bold text-mBlue underline">Abacistics.admin@gmail.com</a>
+        <a href="mailto:Abacistics.admin@gmail.com" class="inline-block text-xs font-bold text-mBlue underline hover:text-mRed transition-colors">Abacistics.admin@gmail.com</a>
       </div>
     </div>
 
@@ -566,30 +572,19 @@
 
   <!-- Scripts -->
   <script>
-    const tabColorMap = {
-      'leaderboard': 'mBlue',
-      'competition': 'mRed',
-      'submit': 'mBlue',
-      'gallery': 'mRed',
-      'about': 'mBlue'
-    };
+    const tabClassInactive = 'tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:bg-mRed hover:border-red-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200';
+    const tabClassActive = 'tab-btn bg-mRed text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-red-900 shadow-md hover:-translate-y-0.5 transition-all duration-200';
 
     function switchTab(tabName) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.className = 'tab-btn bg-mWood text-slate-700 text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-stone-300 hover:bg-stone-200 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200';
+        btn.className = tabClassInactive;
       });
 
       document.getElementById('content-' + tabName).classList.remove('hidden');
 
       const activeBtn = document.getElementById('tab-' + tabName);
-      const color = tabColorMap[tabName];
-      
-      if (color === 'mBlue') {
-        activeBtn.className = 'tab-btn bg-mBlue text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-blue-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200';
-      } else {
-        activeBtn.className = 'tab-btn bg-mRed text-white text-lg font-bold px-6 py-3 rounded-xl border-b-4 border-red-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200';
-      }
+      activeBtn.className = tabClassActive;
     }
 
     function switchDivision(divName) {
@@ -606,8 +601,8 @@
       } else {
         upperDiv.classList.remove('hidden');
         lowerDiv.classList.add('hidden');
-        upperBtn.className = 'px-4 py-2 rounded-lg text-sm font-bold bg-mBlue text-white border-b-2 border-blue-900 shadow-sm hover:-translate-y-0.5 transition-all';
-        lowerBtn.className = 'px-4 py-2 rounded-lg text-sm font-bold bg-white text-slate-600 border-b-2 border-stone-300 hover:bg-stone-100 hover:-translate-y-0.5 transition-all';
+        upperBtn.className = 'px-4 py-2 rounded-lg text-sm font-bold bg-white text-slate-600 border-b-2 border-stone-300 hover:bg-stone-100 hover:-translate-y-0.5 transition-all';
+        lowerBtn.className = 'px-4 py-2 rounded-lg text-sm font-bold bg-mBlue text-white border-b-2 border-blue-900 shadow-sm hover:-translate-y-0.5 transition-all';
       }
     }
   </script>
