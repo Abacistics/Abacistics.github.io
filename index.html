@@ -38,9 +38,15 @@
 </head>
 <body class="bg-abacus-pattern text-slate-900 font-outfit min-h-screen flex flex-col antialiased">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-mRed text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center tracking-wide relative z-40">
-    Summer Challenge Open: <strong class="text-mBlue bg-white/90 px-2 py-0.5 rounded shadow-sm">One Giant Leap</strong> submissions open September 1!
+  <!-- Countdown Banner (Midnight September 1 EST) -->
+  <div class="bg-slate-900 text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center tracking-wide relative z-40 border-b border-mBlue/30">
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+      <span class="uppercase tracking-wider font-bold text-mRed">Leaderboard Goes Live In:</span>
+      <div id="countdown" class="font-mono text-base sm:text-lg font-bold text-mWood bg-mBlue/30 px-3 py-0.5 rounded border border-mBlue/50">
+        --d --h --m --s
+      </div>
+      <span class="text-xs text-slate-400">(September 1, Midnight EST)</span>
+    </div>
   </div>
 
   <!-- Header Banner -->
@@ -87,10 +93,10 @@
     <!-- TAB 1: HOME (LEADERBOARD) -->
     <section id="content-leaderboard" class="tab-content block space-y-6">
       
-      <!-- Welcome Card -->
+      <!-- Welcome Card (Consonants Red, Vowels Blue) -->
       <div class="bg-white/90 backdrop-blur-sm border-4 border-mBlue rounded-lg p-6 sm:p-8 shadow-sm space-y-3">
         <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
-          <span class="text-mBlue">W</span><span class="text-mRed">e</span><span class="text-mBlue">l</span><span class="text-mRed">c</span><span class="text-mBlue">o</span><span class="text-mRed">m</span><span class="text-mRed">e</span>
+          <span class="text-mRed">W</span><span class="text-mBlue">e</span><span class="text-mRed">l</span><span class="text-mRed">c</span><span class="text-mBlue">o</span><span class="text-mRed">m</span><span class="text-mBlue">e</span>
         </h2>
         <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
           Just in time for the new school year, Abacistics has updated our website to be more user-friendly. We hope you will enjoy the new features including a native submission form and the added design highlights section. We are excited for our first competition of the new school year which will be <strong>One Giant Leap</strong>. You can <button onclick="switchTab('competition')" class="text-mBlue font-bold underline hover:text-mRed transition-colors">read the competition rules here</button>. Submissions will open on September 1.
@@ -102,7 +108,7 @@
         <!-- LEFT COLUMN: Previous Challenge & Leaderboard Table -->
         <div class="lg:col-span-2 space-y-6">
           
-          <!-- Previous Challenge Banner -->
+          <!-- Previous Challenge Banner (Consonants Red, Vowels Blue for On a Dime) -->
           <div class="bg-white/90 backdrop-blur-sm border-4 border-mRed rounded-lg p-6 shadow-sm space-y-2">
             <div class="inline-block bg-mWood px-3 py-1 rounded-md border border-mRed/30 text-xs font-bold text-mRed uppercase tracking-widest mb-1">
               Previous Challenge
@@ -110,7 +116,7 @@
             <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
               <span class="text-mBlue">O</span><span class="text-mRed">n</span> 
               <span class="text-mBlue">a</span> 
-              <span class="text-mRed">D</span><span class="text-mBlue">i</span><span class="text-mRed">m</span><span class="text-mRed">e</span>
+              <span class="text-mRed">D</span><span class="text-mBlue">i</span><span class="text-mRed">m</span><span class="text-mBlue">e</span>
             </h3>
             <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
               Design a vehicle or kinetic mechanism capable of stopping as quickly and accurately as possible after covering a distance of exactly 10 feet.
@@ -525,8 +531,8 @@
           </h2>
         </div>
 
-        <div class="bg-mWood p-4 rounded-lg border border-mBlue/40 text-mBlue text-sm font-semibold flex items-center gap-2">
-          <span>📅</span> Submissions open on <strong>September 1st</strong>! The new live competition leaderboard will go live at the beginning of September.
+        <div class="bg-mWood p-4 rounded-lg border border-mBlue/40 text-mBlue text-sm font-semibold">
+          Submissions open on <strong>September 1st</strong>! The new live competition leaderboard will go live at the beginning of September.
         </div>
 
         <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm">
@@ -629,7 +635,7 @@
         </div>
 
         <div class="bg-mWood p-4 rounded-lg border border-mBlue/40 text-mBlue text-xs sm:text-sm font-semibold">
-          🚀 Early submissions are welcome! Please note that the official live leaderboard for "One Giant Leap" will go live at the beginning of September.
+          Early submissions are welcome! Please note that the official live leaderboard for "One Giant Leap" will go live at the beginning of September.
         </div>
 
         <form 
@@ -722,9 +728,9 @@
     <section id="content-gallery" class="tab-content hidden space-y-6">
       <div class="bg-white/90 backdrop-blur-sm border-4 border-mRed rounded-lg p-8 shadow-sm space-y-8">
         <div>
-          <h2 class="text-3xl font-extrabold text-mRed">NEW SECTION</h2>
+          <h2 class="text-3xl font-extrabold text-mRed">Design Highlights & Archive</h2>
           <p class="text-slate-700 text-sm mt-2 leading-relaxed">
-            In addition to a leaderboard, we will begin creating an archive of past design submissions with 5 being selected from each competition. Designs are selected both off of performance and off creativity. The first additions to the gallery will begin with the submissions from <strong>One Giant Leap</strong>.
+            In addition to a leaderboard, we maintain an archive of past design submissions. Highlights are selected based on both raw performance and engineering creativity. Official gallery additions for the current school year will begin with <strong>One Giant Leap</strong>.
           </p>
         </div>
 
@@ -732,49 +738,104 @@
           <strong>Staff Pick Selection Criteria:</strong> Staff picks are chosen by our admin and judging team for exceptional engineering, clever craftsmanship, unique styling, or imaginative problem solving.
         </div>
         
+        <!-- Paired Down to 5 Awards -->
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm space-y-2">
             <span class="text-xs font-bold text-mRed uppercase tracking-wider">Award #1</span>
-            <h3 class="font-bold text-slate-900 text-lg">Competition Winner</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">Awarded to the overall entry with top performance and robust structural execution.</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm space-y-2">
-            <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Award #2</span>
-            <h3 class="font-bold text-slate-900 text-lg">Innovation Award</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">Recognizing the most unique creative design, clever mechanism, or imaginative engineering approach.</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm space-y-2">
-            <span class="text-xs font-bold text-mRed uppercase tracking-wider">Award #3</span>
             <h3 class="font-bold text-slate-900 text-lg">Lower Elementary Winner</h3>
             <p class="text-xs text-slate-600 leading-relaxed">Celebrating the top performing submission in the K-3 grade division.</p>
           </div>
 
           <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm space-y-2">
-            <span class="text-xs font-bold text-mRed uppercase tracking-wider">Award #4</span>
+            <span class="text-xs font-bold text-mRed uppercase tracking-wider">Award #2</span>
             <h3 class="font-bold text-slate-900 text-lg">Upper Elementary Winner</h3>
             <p class="text-xs text-slate-600 leading-relaxed">Celebrating the top performing submission in the 4-6 grade division.</p>
           </div>
 
           <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm space-y-2">
-            <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Award #5</span>
+            <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Award #3</span>
             <h3 class="font-bold text-slate-900 text-lg">Staff Pick 1</h3>
             <p class="text-xs text-slate-600 leading-relaxed">Featured entry selected by our staff panel.</p>
           </div>
 
           <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm space-y-2">
-            <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Award #6</span>
+            <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Award #4</span>
             <h3 class="font-bold text-slate-900 text-lg">Staff Pick 2</h3>
             <p class="text-xs text-slate-600 leading-relaxed">Featured entry selected by our staff panel.</p>
           </div>
 
           <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm space-y-2">
-            <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Award #7</span>
+            <span class="text-xs font-bold text-mBlue uppercase tracking-wider">Award #5</span>
             <h3 class="font-bold text-slate-900 text-lg">Staff Pick 3</h3>
             <p class="text-xs text-slate-600 leading-relaxed">Featured entry selected by our staff panel.</p>
           </div>
         </div>
+
+        <!-- PREVIOUS WINNERS ARCHIVE -->
+        <div class="pt-8 border-t border-slate-200 space-y-8">
+          <h2 class="text-3xl font-extrabold text-slate-900">Previous Winners</h2>
+
+          <!-- Previous Competition 1: On a Dime -->
+          <div class="bg-slate-50 p-6 rounded-lg border-2 border-mRed space-y-4 shadow-sm">
+            <div>
+              <h3 class="text-2xl font-extrabold tracking-tight">
+                <span class="text-mBlue">O</span><span class="text-mRed">n</span> 
+                <span class="text-mBlue">a</span> 
+                <span class="text-mRed">D</span><span class="text-mBlue">i</span><span class="text-mRed">m</span><span class="text-mBlue">e</span>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                Design a vehicle or kinetic mechanism capable of stopping as quickly and accurately as possible after covering a distance of exactly 10 feet.
+              </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4 pt-2">
+              <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-1">
+                <span class="text-[10px] font-bold text-mRed uppercase tracking-wider">Lower Elementary Winner</span>
+                <h4 class="font-extrabold text-base text-slate-900">McQueen</h4>
+                <p class="text-xs text-slate-600">Student: <strong>Leo</strong> | Nevada, US</p>
+                <p class="text-sm font-bold text-mBlue mt-1">Stopping Time: 3.8s</p>
+              </div>
+
+              <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-1">
+                <span class="text-[10px] font-bold text-mRed uppercase tracking-wider">Upper Elementary Winner</span>
+                <h4 class="font-extrabold text-base text-slate-900">coke and mentos</h4>
+                <p class="text-xs text-slate-600">Student: <strong>george</strong> | Rhode Island, US</p>
+                <p class="text-sm font-bold text-mBlue mt-1">Stopping Time: 1.9s</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Competition 2: Simply A-MAZE-ing -->
+          <div class="bg-slate-50 p-6 rounded-lg border-2 border-mBlue space-y-4 shadow-sm">
+            <div>
+              <h3 class="text-2xl font-extrabold tracking-tight">
+                <span class="text-mRed">S</span><span class="text-mBlue">i</span><span class="text-mRed">m</span><span class="text-mRed">p</span><span class="text-mRed">l</span><span class="text-mRed">y</span> 
+                <span class="text-mBlue">A</span>-<span class="text-mRed">M</span><span class="text-mBlue">A</span><span class="text-mRed">Z</span><span class="text-mBlue">E</span>-<span class="text-mBlue">i</span><span class="text-mRed">n</span><span class="text-mRed">g</span>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                Make a maze so that a marble travels to 5 separate points as fast as possible.
+              </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4 pt-2">
+              <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-1">
+                <span class="text-[10px] font-bold text-mRed uppercase tracking-wider">Lower Elementary Winner</span>
+                <h4 class="font-extrabold text-base text-slate-900">Spiderman</h4>
+                <p class="text-xs text-slate-600">Student: <strong>Jordan</strong> | Texas, US</p>
+                <p class="text-sm font-bold text-mBlue mt-1">Maze Time: 15s</p>
+              </div>
+
+              <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-1">
+                <span class="text-[10px] font-bold text-mRed uppercase tracking-wider">Upper Elementary Winner</span>
+                <h4 class="font-extrabold text-base text-slate-900">Matrix</h4>
+                <p class="text-xs text-slate-600">Student: <strong>Adam</strong> | Virginia, US</p>
+                <p class="text-sm font-bold text-mBlue mt-1">Maze Time: 11s</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
@@ -829,11 +890,11 @@
     <!-- Line above copyright -->
     <div class="border-t border-stone-300 pt-6 text-center space-y-1">
       <p class="text-base sm:text-lg font-bold text-mBlue tracking-wide">For students, by students</p>
-      <p class="text-xs text-slate-500 font-medium">© 2025 Abacistics. All rights reserved.</p>
+      <p class="text-xs text-slate-500 font-medium">© 2026 Abacistics. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Interactive Logic Scripts -->
+  <!-- Interactive Logic Scripts & Countdown Timer -->
   <script>
     const tabClassInactive = 'tab-btn bg-mBlue text-white text-base sm:text-lg font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg border-b-4 border-blue-900 hover:bg-mRed hover:border-red-900 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200';
     const tabClassActive = 'tab-btn bg-mRed text-white text-base sm:text-lg font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg border-b-4 border-red-900 shadow-md hover:-translate-y-0.5 transition-all duration-200';
@@ -870,6 +931,30 @@
         lowerBtn.className = divClassInactive;
       }
     }
+
+    // Countdown Timer Logic targeting Midnight September 1, 2026 EST
+    function updateCountdown() {
+      // Set target date to September 1, 00:00:00 EST (UTC-5 / EDT UTC-4)
+      const targetDate = new Date("2026-09-01T00:00:00-04:00").getTime();
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference <= 0) {
+        document.getElementById("countdown").innerText = "LIVE NOW!";
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerText = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
